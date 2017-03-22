@@ -1,6 +1,7 @@
 FROM sequel7/csgo:latest
 
 # install dependencies
+USER root
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get clean && \
