@@ -19,15 +19,15 @@ cd /opt/server/
 
 #casual
 if [ "$GAME_MODE" = "casual" ]; then
-  ./srcds_run -game csgo -console -usercon +game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2 +clientport 27035 +hostport 27035
+  ./srcds_run -game csgo -console -usercon +game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2 +clientport 27035 +hostport 27035 -port 27035
 fi
 
 #arms race
 if [ "$GAME_MODE" = "armsrace" ]; then
-  ./srcds_run -game csgo -console -usercon +game_type 1 +game_mode 0 +mapgroup mg_armsrace +map ar_shoots +clientport 27035 +hostport 27035
+  ./srcds_run -game csgo -console -usercon +game_type 1 +game_mode 0 +mapgroup mg_armsrace +map ar_shoots +clientport 27035 +hostport 27035 -port 27035
 fi
 
 #deathmatch
 if [ "$GAME_MODE" = "deathmatch" ]; then
-  ./srcds_run -game csgo -console -usercon +game_type 1 +game_mode 2 +mapgroup mg_allclassic +map de_dust +clientport 27035 +hostport 27035
+  ./srcds_run -game csgo -console -usercon +game_type 1 +game_mode 2 +mapgroup mg_allclassic +map de_dust +clientport 27035 +hostport 27035 -port 27035
 fi
