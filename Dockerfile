@@ -22,6 +22,7 @@ RUN mkdir -p /opt/steamcmd &&\
     curl -s http://media.steampowered.com/installer/steamcmd_linux.tar.gz | tar -vxz &&\
     chown -R steam /opt/steamcmd &&\
     chown -R steam /opt/server
+ADD gamemodes_server.txt /opt/server/csgo/gamemodes_server.txt
 ADD start.sh /opt/steamcmd/start.sh
 RUN chmod +x /opt/steamcmd/start.sh
 RUN chown steam /opt/steamcmd/start.sh
